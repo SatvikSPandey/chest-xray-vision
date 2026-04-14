@@ -10,14 +10,14 @@ THRESHOLD   = 0.45
 MODEL_PATH = os.path.join(
     os.path.dirname(__file__),
     'weights',
-    'chestvision_full_model.keras'
+    'chestvision_model.h5'
 )
 
 @st.cache_resource
 def load_model():
     model = tf.keras.models.load_model(
         MODEL_PATH,
-        compile=False      # skip loading the custom focal loss optimizer
+        compile=False
     )
     model.compile(
         optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),
