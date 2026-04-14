@@ -1,4 +1,4 @@
-tensorflow-cpu==2.16.1
+tensorflow-cpu
 opencv-python-headless
 numpy
 matplotlib
